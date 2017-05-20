@@ -1,0 +1,19 @@
+{
+  "name": "require-browser",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "build": "gulp clear && gulp pack_publish && gulp app && gulp css",
+    "build-dev": "gulp clear && gulp pack_dev && gulp app && gulp css",
+    "build-alpha": "gulp clear && gulp pack_alpha && gulp app && gulp css",
+    "build-local": "gulp clear && gulp pack_local && gulp app && gulp css"
+  },
+  "author": "mcdyzg",
+  "license": "Apache 2"
+}

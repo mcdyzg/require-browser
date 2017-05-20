@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>require-browser</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta http-equiv="cleartype" content="on">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        <link rel="stylesheet" type="text/css" href="//miz-cdn.b0.upaiyun.com/miz-css-lib/miz-activity-base.css">
+    </head>
+    <body>
+        <div id="AppContainer">
+            dsssss
+        </div>
+        <script src="//miz-cdn.b0.upaiyun.com/miz-js-lib/jquery-2.2.3.min.js"></script>
+        <script src='./require-browser.js'></script>
+        <script type="text/javascript">
+            require.register("./foo.js", function(module, exports, require){
+              module.exports = function(x) {
+                console.log(x);
+              };
+            });
+
+            var foo = require("./foo.js");
+            foo("Hi");
+
+            console.log(require.resolve('./foo.js'))
+        </script>
+</html>
